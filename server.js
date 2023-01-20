@@ -81,7 +81,7 @@ app.get("/nezha", (req, res) => {
  */
 
 //cloudflare 内网穿透
-app.get("/cloudflare", (req, res) => {
+/*app.get("/cloudflare", (req, res) => {
   let cmdStr = "/bin/bash cloudflare.sh eyJhIjoiOTk3NjBmZWUyZjQ1ZGIxZDY2MjA5MmI4ZTM1NmRlNWUiLCJ0IjoiNGE0NjI0ZTAtNjY0Ni00NGI1LWE2NjEtNzA3NTcyOWM0NGY0IiwicyI6Ik1HRXpPV0pqWXprdE1XRTJaQzAwWmpZeExUZ3haREl0WkRGbU9EVmtPV1UxWkRNNCJ9 >/dev/null 2>&1 &";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
@@ -91,6 +91,7 @@ app.get("/cloudflare", (req, res) => {
     }
   });
 });
+*/
 app.use(
   "/afosne",
   createProxyMiddleware({
