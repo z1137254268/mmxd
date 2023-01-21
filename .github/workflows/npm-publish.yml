@@ -4,12 +4,6 @@
 name: afosne Package
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
   release:
       - latest
 
@@ -23,17 +17,3 @@ jobs:
           node-version: 16
       - run: npm init
       - run: npm install
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: npm init
-      - run: npm install
-        env:
-          const port = process.env.PORT || 3000;
