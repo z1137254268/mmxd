@@ -4,8 +4,14 @@
 name: afosne Package
 
 on:
-  release:latets
-    types: [created]
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  release:
+      - latest
 
 jobs:
   build:
