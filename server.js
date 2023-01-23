@@ -159,4 +159,4 @@ download_web((err) => {
   else console.log("初始化-下载afosne文件成功");
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Example app listening on port ${port}!`)); &>/dev/null &
